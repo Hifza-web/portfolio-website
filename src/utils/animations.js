@@ -55,4 +55,43 @@ export const animations = {
       },
     },
   },
+
+  fadeInUp: {
+    initial: {
+      opacity: 0,
+      y: 50,
+    },
+    whileInView: {
+      opacity: 1,
+      y: 0,
+    },
+    viewport: {
+      once: false,
+      amount: 0.2,
+    },
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+
+  // 👇 Add this
+  zoomIn: {
+    initial: {
+      opacity: 0,
+      scale: 0.8,
+    },
+    whileInView: {
+      opacity: 1,
+      scale: 1,
+    },
+    viewport: {
+      once: false,
+      amount: 0.2,
+    },
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
 };
