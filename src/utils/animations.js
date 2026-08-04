@@ -31,7 +31,14 @@ export const animations = {
       ease: "easeOut",
     },
   },
-
+fadeInRight: {
+  initial: { x: 100, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+  transition: {
+    duration: 0.8,
+    ease: "easeOut",
+  },
+},
   heroImage: {
     initial: { x: 100, opacity: 0 },
     animate: {
@@ -94,4 +101,29 @@ export const animations = {
       ease: "easeOut",
     },
   },
+  fadeInLeftOnScroll: {
+  initial: { x: -100, opacity: 0 },
+  whileInView: { x: 0, opacity: 1 },
+  viewport: {
+    once: false,
+    amount: 0.2,
+  },
+  transition: {
+    duration: 0.8,
+    ease: "easeOut",
+  },
+},
+fadeInRightOnScroll: {
+  initial: { x: 100, opacity: 0 },
+  whileInView: { x: 0, opacity: 1 },
+  viewport: {
+    once: false,
+    amount: 0.2,
+  },
+  transition: {
+    duration: 0.8,
+    ease: "easeOut",
+  },
+},
+
 };
