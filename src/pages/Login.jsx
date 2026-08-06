@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Login() {
   return (
     <section className="min-h-screen bg-[linear-gradient(180deg,#081B29_0%,#0B2238_40%,#112E42_75%,#081B29_100%)]">
@@ -48,9 +49,12 @@ function Login() {
           {/* Sign Up */}
           <p className="mt-6 text-center text-gray-300">
             Don't have an account?{" "}
-            <span className="cursor-pointer font-semibold text-[#00ABF0] hover:underline">
-              Sign Up
-            </span>
+            <Link
+  to="/signup"
+  className="cursor-pointer font-semibold text-[#00ABF0] hover:underline"
+>
+  Sign Up
+</Link>
           </p>
         </div>
       </div>
