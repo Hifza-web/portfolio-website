@@ -158,7 +158,7 @@ import { animations } from "../utils/animations";
 
 function Skills() {
   return (
-    <section id="skills" className="bg-[#081B29] py-10 sm:py-12 lg:py-14">
+    <section id="skills" className=" py-10 sm:py-12 lg:py-14">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-16">
         {/* Heading */}
         <motion.h2

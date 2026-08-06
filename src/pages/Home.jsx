@@ -13,8 +13,9 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <>
+    <Navbar />
     <main className="relative w-full overflow-x-hidden">
-      <Navbar />
+      <div className="bg-gradient-to-br from-[#0A0F1F] via-[#081B29] to-[#102E4A]">
       <Hero />
       <About/>
       <Skills/>
@@ -22,6 +23,7 @@ function Home() {
       <Education/>
       <Contact/>
       <Footer/>
+      </div>
       </main>
     </>
   );

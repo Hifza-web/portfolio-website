@@ -93,7 +93,7 @@
 
 function Education() {
   return (
-    <section id="education" className="bg-[#081B29] py-12 sm:py-14">
+    <section id="education" className=" py-12 sm:py-14">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-16">
 
         {/* Heading */}
