@@ -106,7 +106,7 @@ import doctorImg from "../assets/doctor.png";
 
 function Projects() {
   return (
-    <section id="projects" className="min-h-screen bg-[#081B29] py-20">
+    <section id="projects" className="min-h-screen  py-20">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-16">
         {/* Heading */}
         <motion.h3

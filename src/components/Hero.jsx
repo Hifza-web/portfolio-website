@@ -243,7 +243,7 @@ function Hero() {
     <section
       id="home"
       //   className="min-h-screen bg-[#081B29]"
-      className="flex min-h-[87vh] items-center bg-[#081B29] py-12 lg:py-0"
+      className="flex min-h-[87vh] items-center py-12 lg:py-0"
     >
       {/* <div className="mx-auto flex max-w-[1280px] items-center justify-between px-8 py-20 lg:px-16"> */}
       {/* <div className=" mx-auto flex max-w-[1280px] flex-col-reverse items-center justify-between gap-12 px-6 py-10 lg:flex-row lg:px-16"> */}

@@ -165,7 +165,7 @@ import {
 
 function Contact() {
   return (
-    <section id="contact" className="bg-[#081B29] py-16 sm:py-20 lg:py-24 ">
+    <section id="contact" className=" py-16 sm:py-20 lg:py-24 ">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-16">
         {/* Heading */}
         <motion.h6

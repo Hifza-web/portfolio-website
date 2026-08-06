@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <section id="about" className="bg-[#112E42] py-20">
+    <section id="about" className=" py-20">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-16">
         {/* Heading */}
         <h2 className="mb-14 text-center text-4xl font-bold text-white lg:text-5xl">

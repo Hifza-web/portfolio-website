@@ -66,12 +66,12 @@ function Navbar() {
 
   return (
     // <header className="w-full bg-[#081B29] relative z-50">
-    <header className="sticky top-0 z-50 w-full bg-[#081B29]/100 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full bg-[#0B1F2D]/95 backdrop-blur-md">
       <div className="mx-auto flex h-[82px] max-w-[1440px] items-center justify-between px-5 lg:px-16">
 
         {/* Logo */}
-        <h1 className="font-sans text-[24px] sm:text-[32px] font-bold uppercase text-white ">
-          HIFZA NAZAR.
+        <h1 className="font-sans text-[24px] sm:text-[32px] font-bold  text-white ">
+          Portfolio.
         </h1>
 
         {/* Desktop Navigation */}
@@ -96,14 +96,14 @@ function Navbar() {
             </li>
 
             <li>
-              <a href="#services" className="text-[18px] font-medium text-white transition hover:text-sky-400">
-                Services
+              <a href="#projects" className="text-[18px] font-medium text-white transition hover:text-sky-400">
+                Projects
               </a>
             </li>
 
             <li>
-              <a href="#projects" className="text-[18px] font-medium text-white transition hover:text-sky-400">
-                Projects
+              <a href="#education" className="text-[18px] font-medium text-white transition hover:text-sky-400">
+                Education
               </a>
             </li>
 
@@ -174,7 +174,7 @@ function Navbar() {
                 onClick={() => setIsOpen(false)} 
                 className="text-[18px] font-medium text-white transition hover:text-sky-400"
               >
-                Services
+                Projects
               </a>
             </li>
 
@@ -184,7 +184,7 @@ function Navbar() {
                 onClick={() => setIsOpen(false)} 
                 className="text-[18px] font-medium text-white transition hover:text-sky-400"
               >
-                Projects
+                Education
               </a>
             </li>
 
