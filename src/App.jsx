@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AboutPage from "./pages/AboutPage";
+
 
 function App() {
   return (
@@ -20,6 +22,15 @@ function App() {
             </ProtectedRoute>
           }
         />
+                <Route
+          path="/about"
+          element={
+            <ProtectedRoute>
+              <AboutPage />
+            </ProtectedRoute>
+          }
+        />
+
       </Routes>
     </BrowserRouter>
   );
