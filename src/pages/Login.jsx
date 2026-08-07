@@ -1,5 +1,37 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+
 function Login() {
+  const [formData, setFormData] = useState({
+  email: "",
+  password: "",
+});
+const navigate = useNavigate();
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await axios.post(
+      "http://localhost:5000/api/auth/login",
+      formData
+    );
+    localStorage.setItem("token", response.data.token);
+    navigate("/home");
+    // alert(response.data.message);
+    console.log(response.data);
+  } catch (error) {
+    console.log(error);
+    alert(error.response?.data?.message || "Something went wrong");
+  }
+};
   return (
     <section className="min-h-screen bg-[linear-gradient(180deg,#081B29_0%,#0B2238_40%,#112E42_75%,#081B29_100%)]">
       <div className="flex min-h-screen items-center justify-center px-6">
@@ -7,25 +39,31 @@ function Login() {
           <h2 className="mb-8 text-center text-4xl font-bold text-white">
             Login
           </h2>
-
+           <form onSubmit={handleSubmit}>
           {/* Email */}
           <div className="mb-6">
             <label className="mb-2 block text-white">Email</label>
             <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full rounded-lg border border-[#00ABF0]/30 bg-transparent p-4 text-white outline-none placeholder:text-gray-400 focus:border-[#00ABF0]"
-            />
+  type="email"
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  placeholder="Enter your email"
+  className="w-full rounded-lg border border-[#00ABF0]/30 bg-transparent p-4 text-white outline-none placeholder:text-gray-400 focus:border-[#00ABF0]"
+/>
           </div>
 
           {/* Password */}
           <div className="mb-4">
             <label className="mb-2 block text-white">Password</label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              className="w-full rounded-lg border border-[#00ABF0]/30 bg-transparent p-4 text-white outline-none placeholder:text-gray-400 focus:border-[#00ABF0]"
-            />
+           <input
+  type="password"
+  name="password"
+  value={formData.password}
+  onChange={handleChange}
+  placeholder="Enter your password"
+  className="w-full rounded-lg border border-[#00ABF0]/30 bg-transparent p-4 text-white outline-none placeholder:text-gray-400 focus:border-[#00ABF0]"
+/>
           </div>
 
           {/* Forgot Password */}
@@ -45,7 +83,7 @@ function Login() {
           >
             Login
           </button>
-
+            </form>
           {/* Sign Up */}
           <p className="mt-6 text-center text-gray-300">
             Don't have an account?{" "}
