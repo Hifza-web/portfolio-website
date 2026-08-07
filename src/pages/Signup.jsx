@@ -25,7 +25,7 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/auth/signup",
+      "https://portfolio-backend-git-main-hifza75.vercel.app/api/auth/signup", ...
       {
         name: formData.name,
         email: formData.email,
