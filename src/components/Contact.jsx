@@ -184,7 +184,7 @@ function Contact() {
 
     try {
       const response = await axios.post(
-        "https://portfolio-backend-git-main-hifza75.vercel.app/api/contact", ...
+        "https://portfolio-backend-git-main-hifza75.vercel.app/api/contact",
         formData,
       );
 
