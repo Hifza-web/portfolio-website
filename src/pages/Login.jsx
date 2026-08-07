@@ -19,6 +19,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
+    console.log("LOGIN API CALLED");
     const response = await axios.post(
       "https://portfolio-backend-git-main-hifza75.vercel.app/api/auth/login",
       formData
